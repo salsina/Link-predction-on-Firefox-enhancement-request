@@ -8,6 +8,8 @@ import AssigneeInput from './components/AssigneeInput';
 import ComponentInput from './components/ComponentInput';
 import ProductInput from './components/ProductInput';
 import './getInputPage.css';
+import SummaryInput from './components/SummaryInput';
+import DropdownInput from './components/DropdownInput';
 
 function GetInputPage() {
   const [formData, setFormData] = useState({
@@ -26,6 +28,7 @@ function GetInputPage() {
     },
     component: '',
     product: '',
+    summary: ''
   });
 
   const handleInputChange = (field, value) => {
@@ -61,18 +64,20 @@ function GetInputPage() {
   return (
     <div className="page-container">
       <div className="blue-box">
-        <h1>Enter inputs</h1>
+        <h1>Enter new enhancement</h1>
         <div className="input-container">
-          <BlocksInput onChange={(value) => handleInputChange('blocks', value)} />
+          {/* <BlocksInput onChange={(value) => handleInputChange('blocks', value)} />
           <DependsOnInput onChange={(value) => handleInputChange('dependsOn', value)} />
           <DuplicatesInput onChange={(value) => handleInputChange('duplicates', value)} />
-          <RegressedByInput onChange={(value) => handleInputChange('regressedBy', value)} />
+          <RegressedByInput onChange={(value) => handleInputChange('regressedBy', value)} /> */}
         </div>
         <div className="input-container">
-          <CreatorInput onChange={(value) => handleInputChange('creator', value)} />
+          {/* <CreatorInput onChange={(value) => handleInputChange('creator', value)} />
           <AssigneeInput onChange={(value) => handleInputChange('assignee', value)} />
           <ComponentInput onChange={(value) => handleInputChange('component', value)} />
-          <ProductInput onChange={(value) => handleInputChange('product', value)} />
+          <ProductInput onChange={(value) => handleInputChange('product', value)} /> */}
+          <SummaryInput onChange={(value) => handleInputChange('summary', value)} />
+          <DropdownInput />
         </div>
         <button className="submit-button" onClick={handleSubmit}>Submit</button>
       </div>

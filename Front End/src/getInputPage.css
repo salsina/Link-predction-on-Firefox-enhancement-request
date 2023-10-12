@@ -5,8 +5,8 @@
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 70%;
-    text-align: left; /* Reset text alignment for form elements */
+    width: 40%;
+    text-align: center; /* Reset text alignment for form elements */
     margin: 0 auto; /* Center the box horizontally */
     display: flex;
     flex-direction: column;
